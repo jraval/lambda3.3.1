@@ -1,5 +1,12 @@
-document.getElementById('tweet_text_input').value = "please enter your tweet text";
-document.getElementById('tweet_submit').onclick = function(){
-    document.getElementById('tweet_text_input').value = "this doesn't do anything now, but next lecture we will save your tweet to the database.";
-
-};
+$('#author_submit').click(function () {
+    $.ajax({
+        url: '/add_user?twitter_handle=' + $('#author_name_input').val(),
+        type: 'GET',
+    });
+});
+$('#tweet_submit').click(function () {
+    $.ajax({
+        url: '/predict_author?tweet_to_classify=' + $('#tweet_text_input').val(),
+        type: 'GET'
+    });
+});
