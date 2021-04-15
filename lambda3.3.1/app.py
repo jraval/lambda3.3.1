@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 import json
-from data_model import DB, User, Tweet
+from data_model import DB
 from twitter import upsert_user
 from os import path
 from ml import predict_most_likely_author
