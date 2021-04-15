@@ -4,7 +4,7 @@ import numpy as np
 import spacy
 import pandas as pd
 
-transformer = spacy.load('my_model')
+transformer = spacy.load('lambda331/my_model')
 
 
 def predict_most_likely_author(text, possible_authors):
