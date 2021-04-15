@@ -8,6 +8,7 @@ from ml import predict_most_likely_author
 
 def create_app():
 
+
     app = Flask(__name__)
 
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
